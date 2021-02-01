@@ -53,8 +53,8 @@ def main(args: argparse.Namespace):
     table_ids = scraper.find_table_ids()
 
     output_dir_path = Path(args.output_dir)
-    if not Path(args.output_dir).exists():
-        Path(args.output_dir).mkdir()
+    if not output_dir_path.exists():
+        output_dir_path.mkdir()
 
     for table_id in table_ids:
         df = scraper.scrape(table_id)

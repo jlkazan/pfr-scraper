@@ -14,6 +14,10 @@ class Scraper:
             https://github.com/BenKite/football_data/blob/master/profootballReferenceScrape.py
     """
     def __init__(self, url: str):
+        """
+        Initialize a scraper
+        :param url: the url to scrape (must start with http://)
+        """
         self.url = url
 
     def find_table_ids(self) -> List[str]:
